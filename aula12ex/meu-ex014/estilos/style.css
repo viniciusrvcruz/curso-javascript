@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(228, 216, 162);
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+section {
+    background-color: white;
+    width: 500px;
+    height: 260px;
+    box-shadow: 6px 5px 14px rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#imagem {
+    width: 190px;
+    height: 190px;
+    background-color: rgb(183, 183, 252);
+    margin: auto;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}

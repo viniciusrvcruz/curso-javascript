@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="h1">Hora do Dia</h1>
+    </header>
+    <section>
+        <p id="hora">Agora são </p>
+        <div id="imagem">
+
+        </div>
+    </section>
+    <footer>
+        <p>@ViniciusRoberto</p>
+    </footer>
+
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        //var body = window.document.getElementsByTagName('body') 
+        var body = window.document.body
+        var img = window.document.querySelector('div#imagem')
+        var p = window.document.querySelector('p#hora')
+        var h1 = window.document.getElementById('h1')
+
+        if (hora == 1) {
+            body.style.background = 'rgb(0, 0, 54)'
+            p.innerHTML += `${hora} hora da madrugada`
+            img.style.background = 'url(imagens/madrugada.jpeg)'
+        }
+        else if (hora < 6) {
+            body.style.background = 'rgb(0, 0, 54)'
+            p.innerHTML += `${hora} horas da madrugada`
+            img.style.background = 'url(imagens/madrugada.jpeg)'
+        } else if (hora < 12) {
+            body.style.background = 'rgb(228, 216, 162)'
+            p.innerHTML += `${hora} horas da manhã`
+            img.style.background = 'url(imagens/manha.jpg)'
+        } else if (hora < 18) {
+            body.style.background = 'rgb(255, 255, 206)'
+            h1.style.color = 'black'
+            p.innerHTML += `${hora} horas da tarde`
+            img.style.background = 'url(imagens/ensolarado.jpg)'
+        } else if (hora < 23) {
+            body.style.background = 'rgb(0, 0, 54)'
+            p.innerHTML += `${hora} horas da noite`
+            img.style.background = 'url(imagens/noite.jpg)'
+        }
+    </script>
+</body>
+</html>
